@@ -3,6 +3,7 @@ __pycache__
 *$py.class
 
 test/ 
+inputs/ 
 
 # Distribution / packaging 
 .Python build/ 
