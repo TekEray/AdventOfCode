@@ -7,8 +7,7 @@ def readInput():
     abs_file_path = os.path.join(script_dir, rel_path)
     with open(abs_file_path,'r') as f:
         tmpList = f.read().split("\n\n")
-        rulesDict = {record.split('{')[0]: record.split('{')[1][:-1] for record in tmpList[0].splitlines()
-}
+        rulesDict = {record.split('{')[0]: record.split('{')[1][:-1] for record in tmpList[0].splitlines()}
         puzzleList = [{key: int(value) for key, value in (item.split("=") for item in record[1:-1].split(","))} for record in tmpList[1].splitlines()]
         return rulesDict, puzzleList
 
